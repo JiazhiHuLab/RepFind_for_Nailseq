@@ -13,17 +13,25 @@ Nail-seq is a sequencing method to identify the early replication initiation zon
 Example: 
 
 - For EdU sample: 
-```Nailseq_preprocess_stitch.sh -1 EdU_R1.fq -2 EdU_R2.fq -g hg19 -n EdU -o OutDir -p 4  
+
 ```
+Nailseq_preprocess_stitch.sh -1 EdU_R1.fq -2 EdU_R2.fq -g hg19 -n EdU -o OutDir -p 4  
+```
+
 - For BrdU sample:  
-```Nailseq_preprocess_stitch.sh -1 BrdU_R1.fq -2 BrdU_R2.fq -g hg19 -n BrdU -o OutDir -p 4 
+
+```
+Nailseq_preprocess_stitch.sh -1 BrdU_R1.fq -2 BrdU_R2.fq -g hg19 -n BrdU -o OutDir -p 4 
 ```
 (Please set the genome assembly configuration in line 100-119 of Nailseq_preprocess_stitch.sh) 
 
 
 ### Step 2: detect broad peak by SICER
+
 Example:
-```Nailseq_call_broadpeak.sh EdU.bam Ctrl.bam EdU_broad
+
+```
+Nailseq_call_broadpeak.sh EdU.bam Ctrl.bam EdU_broad
 ```
 The control sample is the input DNA without enrichment.
 
@@ -31,8 +39,10 @@ The control sample is the input DNA without enrichment.
 
 ### Step 3: detect the EdU-BrdU rich peak and signal 
 Use the bam file got from Step 1 and broadPeak got from Step2 for calliing EdU-BrdU rich peak.
+
 Example:
-```./Nailseq_call_edu-brdu_signal_peak.sh -1 EdU.bam -2 BrdU.bam -g hg19 -n EdU-BrdU -w 5000 -b EdU_broad.peak
+```
+Nailseq_call_edu-brdu_signal_peak.sh -1 EdU.bam -2 BrdU.bam -g hg19 -n EdU-BrdU -w 5000 -b EdU_broad.peak
 ```
 
 ### Step 4: detect the local maxima of peak
@@ -49,7 +59,8 @@ Finally, the location of the local maxima is the transition sites of the differe
 ## EdU-seq under HU treatment
 ### Step 1: mapping to genome
 - For EdU_HU sample: 
-```Nailseq_preprocess_stitch.sh -1 EdUHU_R1.fq -2 EdUHU_R2.fq -g hg19 -n EdU -o OutDir -p 4  
+```
+Nailseq_preprocess_stitch.sh -1 EdUHU_R1.fq -2 EdUHU_R2.fq -g hg19 -n EdU -o OutDir -p 4  
 ```
 
 ### Step 2: detect the Peaks
@@ -98,7 +109,8 @@ Options:
 ```
 
 ### Nailseq_call\_edu-brdu\_signal\_peak.sh
-```Program: RepFind Nail-seq EdU-BrdU peak
+```
+Program: RepFind Nail-seq EdU-BrdU peak
 Version: 1.0
 Author: Chen Ai
 
