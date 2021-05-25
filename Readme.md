@@ -8,7 +8,8 @@ Liu Y, Ai C, Gan T, et al., Hu J: Transcription shapes DNA replication initiatio
 ## RepFind for Nail-seq analysis
 
 Nail-seq is a sequencing method to identify the early replication initiation zones with two strategies.
-The pipeline is under GNU General Public License v3.0.
+The RepFind pipeline is under GNU General Public License v3.0. 
+DOI：https://doi.org/10.5281/zenodo.4784707
 
 - EdU/BrdU dual labeling sequencing.
 - EdU-seq under HU treatment.
