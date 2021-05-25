@@ -1,6 +1,14 @@
-# RepFind for Nail-seq analysis
+# Transcription shapes DNA replication initiation to preserve genome integrity.
+
+We develop a high-throughput nucleoside analog incorporation sequencing assay, NAIL-seq, and identify thousands of early replication initiation zones (ERIZs) in both mouse and human cells. The identified ERIZs fall in open chromatin compartments while are mutually exclusive with transcription elongation and occupy mainly non-transcribed regions adjacent to transcribed regions. Furthermore, we reveal that RNA polymerase II actively redistributes the chromatin-encircled mini-chromosome maintenance (MCM) complex but not the origin-recognition complex (ORC) to actively restrict early DNA replication initiation outside of transcribed regions. The coupling of RNA polymerase II and MCM is further validated by detected MCM accumulation and DNA replication initiation after RNA polymerase II stalling via anchoring nuclease-dead Cas9 at the transcribed genes. Importantly, we also find that the orchestration of DNA replication initiation by transcription can efficiently prevent gross DNA damage.
+
+## Datasets
+Liu Y, Ai C, Gan T, et al., Hu J: Transcription shapes DNA replication initiation to preserve genome integrity. [GSE174680](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE174680)
+
+## RepFind for Nail-seq analysis
 
 Nail-seq is a sequencing method to identify the early replication initiation zones with two strategies.
+The pipeline is under GNU General Public License v3.0.
 
 - EdU/BrdU dual labeling sequencing.
 - EdU-seq under HU treatment.
